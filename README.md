@@ -1,2 +1,2 @@
-# bulk-marketing-website
+# Software Ganes
 A colorful website for bulk mailing, WhatsApp marketing, and website creation services
