@@ -20,7 +20,7 @@
         /* Navigation */
         nav {
             background: linear-gradient(90deg, #4b5ed6 0%, #7d5fd7 50%, #8a4ca8 100%);
-            padding: 0.8rem 0;
+            padding: 0.7rem 2rem;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -29,10 +29,8 @@
         }
 
         nav .container {
-            width: 100%;
-            max-width: 100%;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -41,30 +39,47 @@
         nav .logo {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
+            gap: 0.8rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
             text-decoration: none;
-            min-width: 0;
+            transition: opacity 0.3s;
+        }
+
+        nav .logo:hover {
+            opacity: 0.8;
         }
 
         .brand-badge {
-            width: clamp(180px, 15vw, 260px);
-            height: auto;
-            display: block;
+            width: 56px;
+            height: 56px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             flex-shrink: 0;
+        }
+
+        .brand-badge svg {
+            width: 100%;
+            height: 100%;
+            display: block;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2.5rem;
-            align-items: center;
+            gap: 2rem;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             transition: opacity 0.3s;
-            font-size: 1.2rem;
+        }
+
+        nav ul a {
+            font-size: 1rem;
             font-weight: 600;
         }
 
@@ -444,20 +459,26 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            nav .container {
-                padding: 0 1rem;
+            nav {
+                padding: 0.6rem 1rem;
             }
 
             nav ul {
                 gap: 1rem;
             }
 
-            nav a {
-                font-size: 1rem;
+            nav ul a {
+                font-size: 0.9rem;
             }
 
             .brand-badge {
-                width: min(56vw, 220px);
+                width: 48px;
+                height: 48px;
+            }
+
+            nav .logo {
+                font-size: 1.4rem;
+                gap: 0.6rem;
             }
 
             .hero-inner {
@@ -542,6 +563,7 @@
                         <path d="M490 700l-25 25-25-25" fill="none" stroke="#0d57d8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
                     </g>
                 </svg>
+                <span>Software Ganes</span>
             </a>
             <ul>
                 <li><a href="#services">Services</a></li>
